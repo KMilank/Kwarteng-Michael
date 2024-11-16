@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please take a moment to fill out this survey</p>
+
+    <form id="survey-form">
+      <!-- Required Labels -->
+      <label id="name-label" for="name">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+      <label id="email-label" for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+      <!-- Number Input for Age -->
+      <label id="number-label" for="number">Age:</label>
+      <input type="number" id="number" name="age" min="1" max="100" required placeholder="Enter your age">
+
+      <!-- Dropdown -->
+      <label for="dropdown">Which option best describes your current role?</label>
+      <select id="dropdown" name="role" required>
+        <option value="">Select your role</option>
+        <option value="student">Student</option>
+        <option value="full-time">Full-Time Job</option>
+        <option value="freelancer">Freelancer</option>
+      </select>
+
+      <!-- Radio Buttons -->
+      <label>How likely are you to recommend this survey?</label>
+      <input type="radio" name="recommend" value="Definitely" required> Definitely
+      <input type="radio" name="recommend" value="Maybe"> Maybe
+      <input type="radio" name="recommend" value="Not Sure"> Not Sure
+
+      <!-- Checkboxes -->
+      <label>What topics are you interested in?</label>
+      <input type="checkbox" name="topics" value="Web Development"> Web Development
+      <input type="checkbox" name="topics" value="Data Science"> Data Science
+      <input type="checkbox" name="topics" value="Machine Learning"> Machine Learning
+
+      <!-- Text Area for Comments -->
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" rows="4" placeholder="Your comments..."></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
